@@ -214,4 +214,6 @@ function game() {
 
 }
 
+//Starts the game
 game();
+
