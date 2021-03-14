@@ -60,23 +60,40 @@ function computerChoice() {
 //Top of "playRound" function
 function playRound() {
 
+	
+
+	//Scoreboard variables
+	let playerScore = 0
+	let computerScore = 0
+	let tally = 0
+
+
+	while (tally < 5) {
+
 	playerSelection = playerChoice();
 	computerSelection = computerChoice();
-
 
 	//Rock check begins
 	if (playerSelection == "rock") {
 		if (computerSelection == "rock") { //rock v rock
-			alert("DRAW!");
+			alert(`DRAW!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
 			//return nothing
+			++tally;
+			//return;
 			 }
 			else if (computerSelection == "paper") { //rock v paper
-				alert("LOSE! Paper covers rock!"); 
+				alert(`LOSE! Paper covers rock!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`); 
 				//gib point to Computer
+				++computerScore
+				++tally;
+				//return;
 			}
 				else if (computerSelection == "scissors") { //rock v scissors
-					alert("WIN! Rock CRUSHES scissors!");
-					//gib point to Player 
+					alert(`WIN! Rock CRUSHES scissors!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
+					//gib point to Player
+					++playerScore 
+					++tally;
+					//return;
 				}
 			}
 	//Rock check ends
@@ -86,11 +103,24 @@ function playRound() {
 	//Paper check begins
 	if (playerSelection == "paper") {
 		if (computerSelection == "rock") { //paper v rock
-			alert("WIN! Paper covers rock!"); }
+			alert(`WIN! Paper covers rock!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
+			//gib point to Player
+			++playerScore
+			++tally;
+			//return;
+			 }
 			else if (computerSelection == "paper") { //paper v paper
-				alert("DRAW"); }
+				alert(`DRAW\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`); 
+				//return nothing
+				++tally;
+				//return;
+			}
 				else if (computerSelection == "scissors") { //paper v scissors
-					alert("LOSE! Scissors cut paper!"); 
+					alert(`LOSE! Scissors cut paper!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
+					//gib point to Computer
+					++computerScore
+					++tally;
+					//return; 
 				}
 			}
 	//Paper check ends
@@ -100,16 +130,41 @@ function playRound() {
 	//Scissors check begins
 	if (playerSelection == "scissors") {
 		if (computerSelection == "rock") { //scissors v rock
-			alert("LOSE! Rock CRUSHES scissors!"); }
+			alert(`LOSE! Rock CRUSHES scissors!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
+			//gib point to Computer
+			++computerScore
+			++tally;
+			//return;
+			 }
 			else if (computerSelection == "paper") { //scissors v paper
-				alert("WIN! Scissors cut paper!"); }
+				alert(`WIN! Scissors cut paper!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`); 
+				//gib point to Player
+				++playerScore
+				++tally;
+				//return;
+			}
 				else if (computerSelection == "scissors") { //scissors v scissors
-					alert("DRAW!"); 
+					alert(`DRAW!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
+					//return nothing
+					++tally;
+					//return; 
 				}
 			}
 	//Scissors check ends
 
+		}
+		//Bottom of the while loop
 
+		//Scoreboard
+		alert(`Rounds: ${tally}\nPlayer: ${playerScore}\nComputer: ${computerScore}`);
+
+		if (playerScore > computerScore) {
+			alert("You win, champ!");
+		} else if (computerScore > playerScore) {
+			alert("Better luck next time, tiger!");
+		} else if (playerScore === computerScore) {
+			alert("A tie! What a friggin' miracle.");
+		}
 
 	}
 //Bottom of "playRound" function
@@ -134,43 +189,29 @@ function playRound() {
 //"game function"
 function game() {
 
-	//Welcome/test alert
+	//playSwitch
+	playSwitch = true;
+
+	//Welcome
 	alert("Welcome to Rock Paper Scissors!");
 
-	//Establishes scores
+	while (playSwitch == true) {
 
-	let playerScore = 0;
-	let computerScore = 0;
-	let rounds = 0
+		playRound();
+	
+		//Takes user response and converts it to lowercase
+		let playAgain = prompt("Want to play again? y/n");
+		playAgain = playAgain.toLowerCase();
 
+		if (playAgain == "n") {
+			alert("Thanks for playing!");
+			playSwitch = false;
+		}
 
-	while (rounds < 4) {
-	playRound();
 	}
 
-	console.log(player, computer)
-
-
-
-	//initializes the playerSelection prompt
+		
 
 }
 
-//game();
-
-
-
-
-//console.log(computerChoice());
-console.log(playRound());
-
-
-
-
-//Math.random testing ground
-/*function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
-}*/
-
+game();
