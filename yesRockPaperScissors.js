@@ -8,10 +8,15 @@ function getRandomInt() {
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
 
-//"playerChoice"
+//"playerChoice" (Could be expanded upon with a check to see if the player entered it in right)
 function playerChoice() {
-	let select = prompt("Rock, paper, or scissors?") //Needs to be case insensitive
-	return select;
+	let selected = prompt("Rock, paper, or scissors?"); //Needs to be case insensitive
+	
+	//Selected is made lowercase
+	choice = selected.toLowerCase(); 
+	//function takes `selected`` and 
+
+	return choice;
 
 }
 
@@ -46,12 +51,62 @@ function computerChoice() {
 
 }
 
-//"Play round" function
-function playRound(playerSelection, computerSelection) {
+
+
+//Top of "playRound" function
+function playRound() {
+
+	playerSelection = playerChoice();
+	computerSelection = computerChoice();
+
+
+	//Rock check begins
+	if (playerSelection == "rock") {
+		if (computerSelection == "rock") { //rock v rock
+			alert("DRAW!"); }
+			else if (computerSelection == "paper") { //rock v paper
+				alert("LOSE! Paper covers rock!"); }
+				else if (computerSelection == "scissors") { //rock v scissors
+					alert("WIN! Rock CRUSHES scissors!"); 
+				}
+			}
+	//Rock check ends
+
+	else
+
+	//Paper check begins
+	if (playerSelection == "paper") {
+		if (computerSelection == "rock") { //paper v rock
+			alert("WIN! Paper covers rock!"); }
+			else if (computerSelection == "paper") { //paper v paper
+				alert("DRAW"); }
+				else if (computerSelection == "scissors") { //paper v scissors
+					alert("LOSE! Scissors cut paper!"); 
+				}
+			}
+	//Paper check ends
+
+	else
+
+	//Scissors check begins
+	if (playerSelection == "scissors") {
+		if (computerSelection == "rock") { //scissors v rock
+			alert("LOSE! Rock CRUSHES scissors!"); }
+			else if (computerSelection == "paper") { //scissors v paper
+				alert("WIN! Scissors cut paper!"); }
+				else if (computerSelection == "scissors") { //scissors v scissors
+					alert("DRAW!"); 
+				}
+			}
+	//Scissors check ends
 
 
 
-}
+	}
+//Bottom of "playRound" function
+	
+
+
 
 //"game function"
 function game() {
@@ -59,12 +114,16 @@ function game() {
 	//Welcome/test alert
 	alert("Welcome to Rock Paper Scissors!");
 
-	//Game asks for player selection (MUST be Rock, Paper, or Scissors)
-	//Best make it case-insensitive
-	player = playerSelection();
+	//Establishes scores
 
-	//Computer plays
-	computer = computerChoice();
+	let playerScore = 0;
+	let computerScore = 0;
+	let rounds = 0
+
+
+	while (rounds < 4) {
+	playRound();
+	}
 
 	console.log(player, computer)
 
@@ -80,7 +139,7 @@ function game() {
 
 
 //console.log(computerChoice());
-console.log(playerChoice());
+console.log(playRound());
 
 
 
