@@ -1,5 +1,3 @@
-//console.log("Hello world!");
-
 //Function that pulls a "random" number from 1 to 3
 //Borrowed from Mozilla https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 function getRandomInt() {
@@ -7,6 +5,8 @@ function getRandomInt() {
   max = Math.floor(4);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 }
+
+//--------------------------------------------------------------------------------------------------------------------------------
 
 //"playerChoice" (Could be expanded upon with a check to see if the player entered it in right)
 function playerChoice() {
@@ -19,6 +19,8 @@ function playerChoice() {
 	return choice;
 
 }
+
+//--------------------------------------------------------------------------------------------------------------------------------
 
 //"computerChoice" OK
 function computerChoice() {
@@ -52,6 +54,8 @@ function computerChoice() {
 }
 
 
+//--------------------------------------------------------------------------------------------------------------------------------
+
 
 //Top of "playRound" function
 function playRound() {
@@ -63,11 +67,16 @@ function playRound() {
 	//Rock check begins
 	if (playerSelection == "rock") {
 		if (computerSelection == "rock") { //rock v rock
-			alert("DRAW!"); }
+			alert("DRAW!");
+			//return nothing
+			 }
 			else if (computerSelection == "paper") { //rock v paper
-				alert("LOSE! Paper covers rock!"); }
+				alert("LOSE! Paper covers rock!"); 
+				//gib point to Computer
+			}
 				else if (computerSelection == "scissors") { //rock v scissors
-					alert("WIN! Rock CRUSHES scissors!"); 
+					alert("WIN! Rock CRUSHES scissors!");
+					//gib point to Player 
 				}
 			}
 	//Rock check ends
@@ -105,6 +114,20 @@ function playRound() {
 	}
 //Bottom of "playRound" function
 	
+
+
+
+/* ^^^^^^ SUPPORTING FUNCTIONS AREA ABOVE ^^^^^ */
+
+
+
+
+
+
+
+
+
+
 
 
 
