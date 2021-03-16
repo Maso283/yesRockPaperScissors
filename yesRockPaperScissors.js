@@ -4,6 +4,7 @@ function getRandomInt() {
   min = Math.ceil(1);
   max = Math.floor(4);
   return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+
 }
 
 //--------------------------------------------------------------------------------------------------------------------------------
@@ -24,13 +25,6 @@ function playerChoice() {
 
 //"computerChoice" OK
 function computerChoice() {
-	//computerSelection = A random number picked out of a list of three
-	
-	/*
-	rock = 1;
-	paper = 2;
-	scissors = 3;
-	*/
 
 	//Setup a variable to catch the computer number and turn it into one of the three options
 	let choice;
@@ -47,8 +41,6 @@ function computerChoice() {
 		choice = "scissors";
 	}
 
-
-	//OK
 	return choice
 
 }
@@ -195,6 +187,7 @@ function game() {
 	//Welcome
 	alert("Welcome to Rock Paper Scissors!");
 
+	//Loop to keep the game going until the player decides to quit
 	while (playSwitch == true) {
 
 		playRound();
