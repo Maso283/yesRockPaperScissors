@@ -165,17 +165,7 @@ function playRound() {
 	
 
 
-
 /* ^^^^^^ SUPPORTING FUNCTIONS AREA ABOVE ^^^^^ */
-
-
-
-
-
-
-
-
-
 
 
 
@@ -208,6 +198,8 @@ function game() {
 		
 
 }
+
+
 
 //Starts the game
 game();
