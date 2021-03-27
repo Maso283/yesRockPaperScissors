@@ -1,3 +1,29 @@
 body {
 	background-color: navajowhite;
 }
+
+main {
+	justify-content: center;
+}
+
+#gamebox {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30%;
+}
+
+ .btn {
+  background-color: #5A4D41; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.gamecontent {
+	display: flex;
+}
