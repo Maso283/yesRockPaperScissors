@@ -3,15 +3,17 @@ body {
 }
 
 main {
+  display: flex;
 	justify-content: center;
+  padding-top: 40%;
 }
 
 #gamebox {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
+  height: 200px;
   flex-direction: row;
-	padding: 30%;
   height: 200px;
 }
 
@@ -28,9 +30,13 @@ main {
   align-self: center;
 }
 
-.btn #rock {
+  #rock {
   align-self: center;
+  margin-bottom: 50%;
 }
+
+
+
 
 .gamecontent {
 	display: flex;
