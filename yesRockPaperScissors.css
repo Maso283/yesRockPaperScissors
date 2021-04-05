@@ -9,8 +9,10 @@ main {
 #gamebox {
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
+  flex-direction: row;
 	padding: 30%;
+  height: 200px;
 }
 
  .btn {
@@ -22,6 +24,12 @@ main {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+
+  align-self: center;
+}
+
+.btn #rock {
+  align-self: center;
 }
 
 .gamecontent {
