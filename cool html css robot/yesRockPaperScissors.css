@@ -25,16 +25,16 @@ main {
   display: inline-block;
   font-size: 16px;
 
-  border: 6px solid black, 6px solid grey;
+  border: 6px solid black;
   border-radius: 5px;
 
   align-self: center;
 }
 
-/*.double-border {
+.double-border {
   border: 6px solid white;
   border-radius: 5px;
-}*/
+}
 
   #rock {
   align-self: center;
