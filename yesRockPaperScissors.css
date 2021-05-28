@@ -4,8 +4,7 @@ body {
 
 main {
   display: flex;
-	justify-content: center;
-  padding-top: 40%;
+	justify-content: space-between;
   flex-direction: column;
 }
 
@@ -14,7 +13,7 @@ main {
 	justify-content: center;
 	align-items: flex-start;
   flex-direction: row;
-  height: 80%;
+  padding-top: 20%;
 }
 
 /*#gamebox :nth-child(1) {order:  1}
@@ -26,7 +25,7 @@ main {
 
 #infobox {
   display: flex;
-  justify-content: center;
+  justify-content:  space-between;
   padding-bottom: 10%;
 }
 
@@ -51,8 +50,7 @@ main {
 }*/
 
   #rock {
-
-  margin-bottom: 50%;
+  margin-bottom: 20%;
 }
 
 
@@ -64,14 +62,26 @@ main {
 
 #messagebox {
   background-color: blanchedalmond;
-  padding: 0.5rem 1rem;
-  border-radius: 5px
+  padding: 0.5rem 1rem; /*Hopefully this will make the 
+  box resize as the messages come in*/
+  border-radius: 5px;
+  align-self: center;
 }
 
 #scoreboard {
-  margin-right: 50%;
-
   background-color: blanchedalmond;
+  padding: 15px 15px;
+  border-radius: 5px;
+  align-self: center;
+}
+
+#computerbox {
+  background-color: black;
+  border-radius: 5px;
+  align-self: center;
   padding: 15px 32px;
-  border-radius: 5px
+}
+
+p#computertext {
+  color: red;
 }
