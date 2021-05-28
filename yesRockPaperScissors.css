@@ -17,6 +17,12 @@ main {
   height: 200px;
 }
 
+#messagebox {
+
+  
+
+}
+
  .btn {
   background-color: #7F7C7B;
   padding: 15px 32px;
@@ -37,8 +43,8 @@ main {
 }*/
 
   #rock {
-  align-self: center;
-  margin-bottom: 100%;
+
+  margin-bottom: 80%;
 }
 
 
