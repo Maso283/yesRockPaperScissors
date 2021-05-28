@@ -63,10 +63,15 @@ main {
 }
 
 #messagebox {
-  background-color: #7F7C7B;
+  background-color: blanchedalmond;
+  padding: 0.5rem 1rem;
+  border-radius: 5px
 }
 
 #scoreboard {
-  background-color: #7F7C7B;
   margin-right: 50%;
+
+  background-color: blanchedalmond;
+  padding: 15px 32px;
+  border-radius: 5px
 }
