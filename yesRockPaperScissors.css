@@ -6,22 +6,30 @@ main {
   display: flex;
 	justify-content: center;
   padding-top: 40%;
+  flex-direction: column;
 }
 
 #gamebox {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-  height: 200px;
   flex-direction: row;
-  height: 200px;
+  height: 80%;
 }
 
-#messagebox {
+/*#gamebox :nth-child(1) {order:  1}
+#gamebox :nth-child(2) {order:  2}
+#gamebox :nth-child(3) {order:  3}
+#gamebox :nth-child(4) {order:  4}
+#gamebox :nth-child(5) {order:  5}*/
 
-  
 
+#infobox {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10%;
 }
+
 
  .btn {
   background-color: #7F7C7B;
@@ -44,7 +52,7 @@ main {
 
   #rock {
 
-  margin-bottom: 80%;
+  margin-bottom: 50%;
 }
 
 
