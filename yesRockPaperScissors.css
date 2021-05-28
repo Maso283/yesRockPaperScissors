@@ -13,7 +13,7 @@ main {
 	justify-content: center;
 	align-items: flex-start;
   flex-direction: row;
-  padding-top: 20%;
+  margin-top: 20%;
 }
 
 /*#gamebox :nth-child(1) {order:  1}
@@ -80,6 +80,8 @@ main {
   border-radius: 5px;
   align-self: center;
   padding: 15px 32px;
+  position: fixed;
+  margin-bottom: 80%;
 }
 
 p#computertext {
