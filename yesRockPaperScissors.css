@@ -61,3 +61,12 @@ main {
 .gamecontent {
 	display: flex;
 }
+
+#messagebox {
+  background-color: #7F7C7B;
+}
+
+#scoreboard {
+  background-color: #7F7C7B;
+  margin-right: 50%;
+}
