@@ -85,3 +85,10 @@ main {
 p#computertext {
   color: red;
 }
+
+.tally {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 0px 5px 0px 5px;
+}
