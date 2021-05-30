@@ -3,24 +3,30 @@ body {
 }
 
 main {
-  
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
 }
 
-#gamebox {
-	
+h1 {
+  align-self: center;
 }
 
-/*#gamebox :nth-child(1) {order:  1}
-#gamebox :nth-child(2) {order:  2}
-#gamebox :nth-child(3) {order:  3}
-#gamebox :nth-child(4) {order:  4}
-#gamebox :nth-child(5) {order:  5}*/
+#game-grid {
+  width:  95 vw;
+  height: 60 vh;
+  margin:  0 auto;
+  display: grid;
 
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-3] 1fr [row-end];
 
-#infobox {
-  
+  grid-template-areas: 
+  "info" "computer" "info"
+  "space" "buttons" "space";
 }
-
 
  .btn {
   background-color: #7F7C7B;
