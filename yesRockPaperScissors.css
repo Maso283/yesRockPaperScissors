@@ -15,18 +15,14 @@ h1 {
 }
 
 #game-grid {
-  width:  95 vw;
-  height: 60 vh;
-  margin:  0 auto;
   display: grid;
+  margin-top: 5%;
 
-  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
-  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-3] 1fr [row-end];
-
-  grid-template-areas: 
-  "info" "computer" "info"
-  "space" "buttons" "space";
+  
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-end] 1fr;
+  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-3] 1fr [row-end] 1fr;
 }
+
 
  .btn {
   background-color: #7F7C7B;
@@ -37,6 +33,9 @@ h1 {
 
   border: 6px solid black, 6px solid grey;
   border-radius: 5px;
+
+  width: min-content;
+  height:  min-content;
 }
 
 /*.double-border {
@@ -48,31 +47,71 @@ h1 {
   
 }
 
-
-
-
-.gamecontent {
-	
-}
-
 #messagebox {
   background-color: blanchedalmond;
   padding: 0.5rem 1rem; /*Hopefully this will make the 
   box resize as the messages come in*/
   border-radius: 5px;
+  margin-left: 50%;
 }
 
 #scoreboard {
   background-color: blanchedalmond;
   padding: 15px 15px;
   border-radius: 5px;
+  margin-right: 50%;
 }
 
-#computerbox {
+#computer {
+  width: min-content;
+  height:  min-content;
+  /*Note: spent an hour trying to figure out how I got the
+  shape and size for the buttons and how to apply it to the computer.
+  setting width and height with min-content seemd to work.
+  I must look further into this. */
   background-color: black;
-  border-radius: 5px;
   padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+
+  border: 6px solid black, 6px solid grey;
+  border-radius: 5px;
+
 }
+
+.item1{
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 1;
+  grid-row-end: 2;}
+
+.item2{
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  grid-row-start: 1;
+  grid-row-end: 2;}
+
+.item3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.item4 {
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 4;
+  grid-row-end: 5;}
+
 
 p#computertext {
   color: red;
@@ -82,4 +121,9 @@ p#computertext {
   color: white;
   background-color: black;
   border-radius: 5px;
+}
+
+#gamebox {
+  display: flex;
+  justify-content: center;
 }
