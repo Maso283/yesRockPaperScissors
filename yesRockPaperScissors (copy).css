@@ -3,11 +3,17 @@ body {
 }
 
 main {
-  
+  display: flex;
+	justify-content: space-between;
+  flex-direction: column;
 }
 
 #gamebox {
-	
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+  flex-direction: row;
+  margin-top: 20%;
 }
 
 /*#gamebox :nth-child(1) {order:  1}
@@ -18,7 +24,9 @@ main {
 
 
 #infobox {
-  
+  display: flex;
+  justify-content:  space-between;
+  padding-bottom: 10%;
 }
 
 
@@ -27,10 +35,13 @@ main {
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
+  display: inline-block;
   font-size: 16px;
 
   border: 6px solid black, 6px solid grey;
   border-radius: 5px;
+
+  align-self: center;
 }
 
 /*.double-border {
@@ -39,14 +50,14 @@ main {
 }*/
 
   #rock {
-  
+  margin-bottom: 20%;
 }
 
 
 
 
 .gamecontent {
-	
+	display: flex;
 }
 
 #messagebox {
@@ -54,18 +65,23 @@ main {
   padding: 0.5rem 1rem; /*Hopefully this will make the 
   box resize as the messages come in*/
   border-radius: 5px;
+  align-self: center;
 }
 
 #scoreboard {
   background-color: blanchedalmond;
   padding: 15px 15px;
   border-radius: 5px;
+  align-self: center;
 }
 
 #computerbox {
   background-color: black;
   border-radius: 5px;
   padding: 15px 32px;
+  position: fixed;
+  margin-bottom: 80%;
+  margin-right: 50%;
 }
 
 p#computertext {
@@ -76,4 +92,5 @@ p#computertext {
   color: white;
   background-color: black;
   border-radius: 5px;
+  padding: 0px 5px 0px 5px;
 }
