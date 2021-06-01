@@ -20,7 +20,7 @@ h1 {
 
   
   grid-template-columns: [col-start] 1fr [col-2] 1fr [col-end] 1fr;
-  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-3] 1fr [row-end] 1fr;
+  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-end] 1fr;
 }
 
 
@@ -43,16 +43,14 @@ h1 {
   border-radius: 5px;
 }*/
 
-  #rock {
-  
-}
 
 #messagebox {
   background-color: blanchedalmond;
   padding: 0.5rem 1rem; /*Hopefully this will make the 
   box resize as the messages come in*/
   border-radius: 5px;
-  margin-left: 50%;
+  margin-left: 89%;
+  position: absolute;
 }
 
 #scoreboard {
@@ -60,6 +58,7 @@ h1 {
   padding: 15px 15px;
   border-radius: 5px;
   margin-right: 50%;
+  position: absolute;
 }
 
 #computer {
@@ -77,6 +76,9 @@ h1 {
 
   border: 6px solid black, 6px solid grey;
   border-radius: 5px;
+
+  align-self: flex-start;
+  justify-self: center;
 
 }
 
@@ -109,8 +111,9 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 3;
 
-  grid-row-start: 4;
-  grid-row-end: 5;}
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
 
 
 p#computertext {
@@ -125,5 +128,20 @@ p#computertext {
 
 #gamebox {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  height: 200px;
+
+}
+
+#gamebox>*:first-child {
+  align-self: flex-end;
+}
+
+#gamebox>*:nth-child(2) {
+  align-self: flex-start;
+}
+
+#gamebox>*:last-child {
+  align-self: flex-end;
 }
