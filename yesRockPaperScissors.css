@@ -30,8 +30,6 @@ h1 {
   text-align: center;
   text-decoration: none;
   font-size: 16px;
-
-  border: 6px solid black, 6px solid grey;
   border-radius: 5px;
 
   width: min-content;
@@ -69,16 +67,17 @@ h1 {
   setting width and height with min-content seemd to work.
   I must look further into this. */
   background-color: black;
-  padding: 15px 32px;
+  padding: 32px 32px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
 
-  border: 6px solid black, 6px solid grey;
   border-radius: 5px;
 
   align-self: flex-start;
   justify-self: center;
+
+  color: red;
 
 }
 
@@ -115,10 +114,6 @@ h1 {
   grid-row-end: 4;
 }
 
-
-p#computertext {
-  color: red;
-}
 
 .tally {
   color: white;

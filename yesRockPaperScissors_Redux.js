@@ -50,11 +50,19 @@ function computerChoice() {
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
+function playRoundRock() {
+
+  
+
+}
 
 //Top of "playRound" function
 function playRound() {
 
-	
+	/* Where the DOM Manipulation goes? */
+
+  
+
 
 	//Scoreboard variables
 	let playerScore = 0
@@ -165,6 +173,8 @@ function playRound() {
 	
 
 
+
+
 /* ^^^^^^ SUPPORTING FUNCTIONS AREA ABOVE ^^^^^ */
 
 
@@ -173,31 +183,12 @@ function playRound() {
 //"game function"
 function game() {
 
-	//playSwitch
-	playSwitch = true;
+  // Event Listeners
+  const computerContainer = document.querySelector('#computer');
+  computerContainer.addEventListener('click', () => {document.getElementById("computer").innerHTML = "&#128544"});
 
-	//Welcome
-	alert("Welcome to Rock Paper Scissors!");
-
-	//Loop to keep the game going until the player decides to quit
-	while (playSwitch == true) {
-
-		playRound();
-	
-		//Takes user response and converts it to lowercase
-		let playAgain = prompt("Want to play again? y/n");
-		playAgain = playAgain.toLowerCase();
-
-		if (playAgain == "n") {
-			alert("Thanks for playing!");
-			playSwitch = false;
-		}
 
 	}
-
-		
-
-}
 
 
 
