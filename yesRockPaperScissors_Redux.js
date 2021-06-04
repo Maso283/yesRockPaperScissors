@@ -9,23 +9,7 @@ function getRandomInt() {
 
 }
 
-//--------------------------------------------------------------------------------------------------------------------------------
 
-//"playerChoice" (Could be expanded upon with a check to see if the player entered it in right)
-function playerChoice() {
-	let selected = prompt("Rock, paper, or scissors?"); //Needs to be case insensitive
-	
-	//Selected is made lowercase
-	choice = selected.toLowerCase(); 
-	//function takes `selected`` and 
-
-	return choice;
-
-}
-
-//--------------------------------------------------------------------------------------------------------------------------------
-
-//"computerChoice" OK
 function computerChoice() {
 
 	//Setup a variable to catch the computer number and turn it into one of the three options
@@ -37,10 +21,13 @@ function computerChoice() {
 	//Now we test the results with an "if" statement
 	if (computer === 1) {
 		choice = "rock";
+		//toggle rock emoji with "div.classList.toggle('active')"
 	} else if (computer === 2) {
 		choice = "paper";
+		//toggle paper emoji
 	} else if (computer === 3) {
 		choice = "scissors";
+		//toggle scissors emoji
 	}
 
 	return choice
@@ -50,127 +37,58 @@ function computerChoice() {
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
-function playRoundRock() {
+function playRock() {
+	
+    computerSelection = computerChoice();
+    if (computerSelection == "rock") { //rock v rock
+	  		alert(`DRAW!`);
+	  		//return nothing
+	  		 }
+	  		else if (computerSelection == "paper") { //rock v paper
+	  			alert(`LOSE! Paper covers rock!`); 
+	  			//return point to computer;
+	  		}
+	  			else if (computerSelection == "scissors") { //rock v scissors
+	  				alert(`WIN! Rock CRUSHES scissors!`);
+	  				//return point to player
+	  		}
 
-  
-
-}
-
-//Top of "playRound" function
-function playRound() {
-
-	/* Where the DOM Manipulation goes? */
-
-  
+};
 
 
-	//Scoreboard variables
-	let playerScore = 0
-	let computerScore = 0
-	let tally = 0
+function playPaper() {
 
-
-	while (tally < 5) {
-
-	playerSelection = playerChoice();
-	computerSelection = computerChoice();
-
-	//Rock check begins
-	if (playerSelection == "rock") {
-		if (computerSelection == "rock") { //rock v rock
-			alert(`DRAW!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
-			//return nothing
-			++tally;
-			//return;
-			 }
-			else if (computerSelection == "paper") { //rock v paper
-				alert(`LOSE! Paper covers rock!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`); 
-				//gib point to Computer
-				++computerScore
-				++tally;
-				//return;
+  if (computerSelection == "rock") { //paper v rock
+			alert(`WIN! Paper covers rock!`);
+			
 			}
-				else if (computerSelection == "scissors") { //rock v scissors
-					alert(`WIN! Rock CRUSHES scissors!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
-					//gib point to Player
-					++playerScore 
-					++tally;
-					//return;
-				}
-			}
-	//Rock check ends
-
-	else
-
-	//Paper check begins
-	if (playerSelection == "paper") {
-		if (computerSelection == "rock") { //paper v rock
-			alert(`WIN! Paper covers rock!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
-			//gib point to Player
-			++playerScore
-			++tally;
-			//return;
-			 }
 			else if (computerSelection == "paper") { //paper v paper
-				alert(`DRAW\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`); 
-				//return nothing
-				++tally;
-				//return;
+				alert(`DRAW`); 
+				
 			}
 				else if (computerSelection == "scissors") { //paper v scissors
-					alert(`LOSE! Scissors cut paper!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
-					//gib point to Computer
-					++computerScore
-					++tally;
-					//return; 
-				}
-			}
-	//Paper check ends
+					alert(`LOSE! Scissors cut paper!`);
+					
+      }
+};
 
-	else
 
-	//Scissors check begins
-	if (playerSelection == "scissors") {
-		if (computerSelection == "rock") { //scissors v rock
-			alert(`LOSE! Rock CRUSHES scissors!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
-			//gib point to Computer
-			++computerScore
-			++tally;
-			//return;
+function playScissors() {
+
+  if (computerSelection == "rock") { //scissors v rock
+			alert(`LOSE! Rock CRUSHES scissors!`);
+			
 			 }
 			else if (computerSelection == "paper") { //scissors v paper
-				alert(`WIN! Scissors cut paper!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`); 
-				//gib point to Player
-				++playerScore
-				++tally;
-				//return;
+				alert(`WIN! Scissors cut paper!`); 
+				
 			}
 				else if (computerSelection == "scissors") { //scissors v scissors
-					alert(`DRAW!\nPlayer: ${playerSelection}\nComputer: ${computerSelection}`);
-					//return nothing
-					++tally;
-					//return; 
+					alert(`DRAW!`);
+					
 				}
-			}
-	//Scissors check ends
+};
 
-		}
-		//Bottom of the while loop
-
-		//Scoreboard
-		alert(`Rounds: ${tally}\nPlayer: ${playerScore}\nComputer: ${computerScore}`);
-
-		if (playerScore > computerScore) {
-			alert("You win, champ!");
-		} else if (computerScore > playerScore) {
-			alert("Better luck next time, tiger!");
-		} else if (playerScore === computerScore) {
-			alert("A tie! What a friggin' miracle.");
-		}
-
-	}
-//Bottom of "playRound" function
-	
 
 
 
@@ -183,12 +101,27 @@ function playRound() {
 //"game function"
 function game() {
 
+	const computerContainer = document.querySelector('#computer');
+  const messages = document.querySelector('#messagebox');
+  const rock = document.querySelector('#rock');
+  const paper = document.querySelector('#paper');
+  const scissors = document.querySelector('#scissors');
+
+  let playerScore = 0;
+	let computerScore = 0;
+	let tally = 0;
+
+  rock.addEventListener('click', playRock);
+  paper.addEventListener('click', playPaper);
+  scissors.addEventListener('click', playScissors);
+
   // Event Listeners
-  const computerContainer = document.querySelector('#computer');
+  
+
   computerContainer.addEventListener('click', () => {document.getElementById("computer").innerHTML = "&#128544"});
 
 
-	}
+	};
 
 
 
