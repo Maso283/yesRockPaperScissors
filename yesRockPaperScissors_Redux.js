@@ -42,7 +42,7 @@ function playRock() {
     computerSelection = computerChoice();
     if (computerSelection == "rock") { //rock v rock
 	  		alert(`DRAW!`);
-	  		//return nothing
+	  		document.getElementById("computer").innerHTML = "&#128528;";
 	  		 }
 	  		else if (computerSelection == "paper") { //rock v paper
 	  			alert(`LOSE! Paper covers rock!`); 
@@ -101,6 +101,7 @@ function playScissors() {
 //"game function"
 function game() {
 
+  //Event Listeners
 	const computerContainer = document.querySelector('#computer');
   const messages = document.querySelector('#messagebox');
   const rock = document.querySelector('#rock');
@@ -114,11 +115,6 @@ function game() {
   rock.addEventListener('click', playRock);
   paper.addEventListener('click', playPaper);
   scissors.addEventListener('click', playScissors);
-
-  // Event Listeners
-  
-
-  computerContainer.addEventListener('click', () => {document.getElementById("computer").innerHTML = "&#128544"});
 
 
 	};

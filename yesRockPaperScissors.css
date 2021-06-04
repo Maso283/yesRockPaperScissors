@@ -81,6 +81,21 @@ h1 {
 
 }
 
+#neutralComputer{margin: 0%;}
+
+.computerFace{margin:  0%;}
+
+.computerFace #happyComputer{}
+
+.computerFace #victoriousComputer{}
+
+.computerFace #angryComputer{}
+
+.computerFace #madComputer{}
+
+.computerFace #neutralComputer{}
+
+
 .item1{
 
   grid-column-start: 1;
