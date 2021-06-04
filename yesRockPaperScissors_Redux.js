@@ -9,7 +9,16 @@ function getRandomInt() {
 
 }
 
+// Function to make the computer wait before changing emojis
+//Courtesy of Dr. Derek Austin at devgenius https://blog.devgenius.io/how-to-make-javascript-sleep-or-wait-d95d33c99909
+function wait() {
 
+  setTimeout(() => console.log("First"), 1000)
+  setTimeout(() => console.log("Second"), 2000)
+  setTimeout(() => console.log("Third"), 3000)
+}
+
+// Makes the "computer" choose a random number
 function computerChoice() {
 
 	//Setup a variable to catch the computer number and turn it into one of the three options
@@ -43,6 +52,10 @@ function playRock() {
     if (computerSelection == "rock") { //rock v rock
 	  		alert(`DRAW!`);
 	  		document.getElementById("computer").innerHTML = "&#128528;";
+	  		setTimeout(function(){
+	  			document.getElementById("computer").innerHTML = "&#128540"
+	  		}, 3000);
+	  		
 	  		 }
 	  		else if (computerSelection == "paper") { //rock v paper
 	  			alert(`LOSE! Paper covers rock!`); 
