@@ -51,18 +51,27 @@ function playRock() {
     computerSelection = computerChoice();
     if (computerSelection == "rock") { //rock v rock
 	  		alert(`DRAW!`);
-	  		document.getElementById("computer").innerHTML = "&#128528;";
+	  		document.getElementById("computer").innerHTML = "😐";
 	  		setTimeout(function(){
-	  			document.getElementById("computer").innerHTML = "&#128540"
+	  			document.getElementById("computer").innerHTML = "😜"
 	  		}, 3000);
 	  		
 	  		 }
 	  		else if (computerSelection == "paper") { //rock v paper
-	  			alert(`LOSE! Paper covers rock!`); 
+	  			alert(`LOSE! Paper covers rock!`);
+	  			document.getElementById("computer").innerHTML = "😁";
+
+	  		  setTimeout(function(){
+	  			document.getElementById("computer").innerHTML = "😜"
+	  		}, 3000); 
 	  			//return point to computer;
 	  		}
 	  			else if (computerSelection == "scissors") { //rock v scissors
 	  				alert(`WIN! Rock CRUSHES scissors!`);
+	  				document.getElementById("computer").innerHTML = "😤";
+	  		    setTimeout(function(){
+	  			  document.getElementById("computer").innerHTML = "😜"
+	  		}, 3000);
 	  				//return point to player
 	  		}
 

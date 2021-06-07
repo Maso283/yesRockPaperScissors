@@ -20,7 +20,7 @@ h1 {
 
   
   grid-template-columns: [col-start] 1fr [col-2] 1fr [col-end] 1fr;
-  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-end] 1fr;
+  grid-template-rows: [row-start] 1fr [row-end] 1fr;
 }
 
 
@@ -59,7 +59,7 @@ h1 {
   position: absolute;
 }
 
-#computer {
+.computer {
   width: min-content;
   height:  min-content;
   /*Note: spent an hour trying to figure out how I got the
@@ -67,7 +67,7 @@ h1 {
   setting width and height with min-content seemd to work.
   I must look further into this. */
   background-color: black;
-  padding: 32px 32px;
+  padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -81,19 +81,59 @@ h1 {
 
 }
 
-#neutralComputer{margin: 0%;}
 
-.computerFace{margin:  0%;}
 
-.computerFace #happyComputer{}
+#computerBody{
 
-.computerFace #victoriousComputer{}
+  display: grid;
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-end] 1fr;
+  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-end] 1fr;
 
-.computerFace #angryComputer{}
+}
 
-.computerFace #madComputer{}
+#computerFace{
+  margin:  0%;
 
-.computerFace #neutralComputer{}
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+}
+
+#computerHat{
+  margin:  0%;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+}
+
+#leftHand{
+  margin:  0%;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+}
+
+#rightHand{
+  margin:  0%;
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+}
 
 
 .item1{
@@ -116,8 +156,8 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 3;
 
-  grid-row-start: 2;
-  grid-row-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
 }
 
 .item4 {
@@ -125,8 +165,8 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 3;
 
-  grid-row-start: 3;
-  grid-row-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
 }
 
 
@@ -141,17 +181,18 @@ h1 {
   flex-direction: row;
   justify-content: center;
   height: 200px;
+  margin-top: 50px;
 
 }
 
 #gamebox>*:first-child {
-  align-self: flex-end;
-}
-
-#gamebox>*:nth-child(2) {
   align-self: flex-start;
 }
 
-#gamebox>*:last-child {
+#gamebox>*:nth-child(2) {
   align-self: flex-end;
+}
+
+#gamebox>*:last-child {
+  align-self: flex-start;
 }
