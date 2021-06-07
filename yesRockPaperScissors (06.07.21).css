@@ -1,0 +1,206 @@
+body {
+	background-color: navajowhite;
+}
+
+main {
+
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+}
+
+h1 {
+  align-self: center;
+}
+
+#game-grid {
+  display: grid;
+  margin-top: 5%;
+
+  
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-end] 1fr;
+  grid-template-rows: [row-start] 1fr [row-end] 1fr;
+}
+
+
+ .btn {
+  background-color: #7F7C7B;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+
+  width: min-content;
+  height:  min-content;
+}
+
+/*.double-border {
+  border: 6px solid white;
+  border-radius: 5px;
+}*/
+
+
+#messagebox {
+  background-color: blanchedalmond;
+  padding: 0.5rem 1rem; /*Hopefully this will make the 
+  box resize as the messages come in*/
+  border-radius: 5px;
+  margin-left: 89%;
+  position: absolute;
+}
+
+#scoreboard {
+  background-color: blanchedalmond;
+  padding: 15px 15px;
+  border-radius: 5px;
+  margin-right: 50%;
+  position: absolute;
+}
+
+.computer {
+  width: 32px;
+  height:  32px;
+  /*Note: spent an hour trying to figure out how I got the
+  shape and size for the buttons and how to apply it to the computer.
+  setting width and height with min-content seemd to work.
+  I must look further into this. */
+  background-color: black;
+  padding: 32px 32px;
+  text-align: center;
+  font-size: 16px;
+
+  border-radius: 5px;
+
+  align-self: flex-start;
+  justify-self: center;
+  align-content: center;
+
+  position: relative;
+
+  color: red;
+
+}
+
+
+
+#computerBody{
+
+  display: grid;
+  grid-template-columns: [col-start] 1fr [col-2] 1fr [col-end] 1fr;
+  grid-template-rows: [row-start] 1fr [row-2] 1fr [row-end] 1fr;
+
+
+}
+
+#computerFace{
+  margin:  0%;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+}
+
+#computerHat{
+  margin:  0%;
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+}
+
+#leftHand{
+  margin:  0%;
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+}
+
+#rightHand{
+  margin:  0%;
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  grid-row-start: 3;
+  grid-row-end: 4;
+
+}
+
+.emojiWrapper{
+  align-self: center;
+  justify-self: center;
+  
+}
+
+.item1{
+
+  grid-column-start: 1;
+  grid-column-end: 2;
+
+  grid-row-start: 1;
+  grid-row-end: 2;}
+
+.item2{
+
+  grid-column-start: 3;
+  grid-column-end: 4;
+
+  grid-row-start: 1;
+  grid-row-end: 2;}
+
+.item3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.item4 {
+
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+
+.tally {
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+}
+
+#gamebox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 200px;
+  margin-top: 50px;
+
+}
+
+#gamebox>*:first-child {
+  align-self: flex-start;
+}
+
+#gamebox>*:nth-child(2) {
+  align-self: flex-end;
+}
+
+#gamebox>*:last-child {
+  align-self: flex-start;
+}

@@ -9,32 +9,32 @@
   <main>
 
 
-    <h1 id="title">Yes. Rock, Paper, Scissors.</h1>
+    <h1>Yes. Rock, Paper, Scissors.</h1>
     
     <!-- CSS grid-wrapper -->
     <div id="game-grid">
   	  
       <!--Self-explanatory-->
-      <div class="item1" id="scoreboard">
+      <div id="scoreboard">
         <p>Score</p>
         <div class="tally" id="playerScore"><p>Mock score</p></div>
         <div class="tally" id="computerScore"><p>Mock score</p></div>
       </div>
 
-      <div class="item2" id="messagebox"><p>Message</p></div>
+      <!--Where game messages will be displayed-->
+      <div id="messagebox"><p>Message</p></div>
       
       <!-- Screen for showing computer's moves, reactions -->
-
-      <div class="item3" id="computerBody">
-        <div class="computer" id="computerFace"><p class="emojiWrapper">😜</p></div>
-        <div class="computer" id="computerHat"><p class="emojiWrapper">🎩</p></div>
-        <div class="computer" id="leftHand"><p class="emojiWrapper">✋‍‍</p></div>
-        <div class="computer" id="rightHand"><p class="emojiWrapper">✋‍‍</p></div>
+      <div id="computerBody">
+        <div class="display" id="face">😜</div>
+        <div class="display" id="hat">🎩</div>
+        <div class="display" id="lHand">✋‍‍</div>
+        <div class="display" id="rHand">✋‍‍</div>
       </div>
 
 
       <!-- Box for player buttons -->
-      <div class="item4" id="gamebox">
+      <div id="gamebox">
         <button type="button" class="btn" id="paper"><div class="double-border"><p>&#9995</p></div></button>
         <button type="button" class="btn" id="rock"><div class="double-border"><p>&#9994</p></div></button>
         <button type="button" class="btn" id="scissors"><div class="double-border"><p>&#9996</p></div></button>
