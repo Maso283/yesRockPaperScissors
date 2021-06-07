@@ -9,14 +9,6 @@ function getRandomInt() {
 
 }
 
-// Function to make the computer wait before changing emojis
-//Courtesy of Dr. Derek Austin at devgenius https://blog.devgenius.io/how-to-make-javascript-sleep-or-wait-d95d33c99909
-function wait() {
-
-  setTimeout(() => console.log("First"), 1000)
-  setTimeout(() => console.log("Second"), 2000)
-  setTimeout(() => console.log("Third"), 3000)
-}
 
 // Makes the "computer" choose a random number
 function computerChoice() {
@@ -50,27 +42,26 @@ function playRock() {
 	
     computerSelection = computerChoice();
     if (computerSelection == "rock") { //rock v rock
-	  		alert(`DRAW!`);
-	  		document.getElementById("computer").innerHTML = "😐";
-	  		setTimeout(function(){
-	  			document.getElementById("computer").innerHTML = "😜"
+	  		  alert(`DRAW!`);
+	  		  document.getElementById("computerFace").innerHTML = "😐";
+	  		  setTimeout(function(){
+	  			document.getElementById("computerFace").innerHTML = "😜"
 	  		}, 3000);
 	  		
 	  		 }
 	  		else if (computerSelection == "paper") { //rock v paper
 	  			alert(`LOSE! Paper covers rock!`);
-	  			document.getElementById("computer").innerHTML = "😁";
-
+	  			document.getElementById("computerFace").innerHTML = "😁";
 	  		  setTimeout(function(){
-	  			document.getElementById("computer").innerHTML = "😜"
+	  			document.getElementById("computerFace").innerHTML = "😜"
 	  		}, 3000); 
 	  			//return point to computer;
 	  		}
 	  			else if (computerSelection == "scissors") { //rock v scissors
 	  				alert(`WIN! Rock CRUSHES scissors!`);
-	  				document.getElementById("computer").innerHTML = "😤";
+	  				document.getElementById("computerFace").innerHTML = "😤";
 	  		    setTimeout(function(){
-	  			  document.getElementById("computer").innerHTML = "😜"
+	  			  document.getElementById("computerFace").innerHTML = "😜"
 	  		}, 3000);
 	  				//return point to player
 	  		}
@@ -80,16 +71,29 @@ function playRock() {
 
 function playPaper() {
 
+  computerSelection = computerChoice();
   if (computerSelection == "rock") { //paper v rock
 			alert(`WIN! Paper covers rock!`);
+			document.getElementById("computerFace").innerHTML = "😤";
+	  	setTimeout(function(){
+	  	document.getElementById("computerFace").innerHTML = "😜"
+	  		}, 3000);
 			
 			}
 			else if (computerSelection == "paper") { //paper v paper
-				alert(`DRAW`); 
+				alert(`DRAW`);
+				document.getElementById("computerFace").innerHTML = "😐";
+	  		setTimeout(function(){
+	  			document.getElementById("computerFace").innerHTML = "😜"
+	  		}, 3000);
 				
 			}
 				else if (computerSelection == "scissors") { //paper v scissors
 					alert(`LOSE! Scissors cut paper!`);
+					document.getElementById("computerFace").innerHTML = "😁";
+	  		  setTimeout(function(){
+	  			document.getElementById("computerFace").innerHTML = "😜"
+	  		}, 3000); 
 					
       }
 };
@@ -99,14 +103,26 @@ function playScissors() {
 
   if (computerSelection == "rock") { //scissors v rock
 			alert(`LOSE! Rock CRUSHES scissors!`);
+			document.getElementById("computerFace").innerHTML = "😁";
+	  		  setTimeout(function(){
+	  			document.getElementById("computerFace").innerHTML = "😜"
+	  		}, 3000); 
 			
 			 }
 			else if (computerSelection == "paper") { //scissors v paper
-				alert(`WIN! Scissors cut paper!`); 
+				alert(`WIN! Scissors cut paper!`);
+				document.getElementById("computerFace").innerHTML = "😤";
+	  	setTimeout(function(){
+	  	document.getElementById("computerFace").innerHTML = "😜"
+	  		}, 3000); 
 				
 			}
 				else if (computerSelection == "scissors") { //scissors v scissors
 					alert(`DRAW!`);
+					document.getElementById("computerFace").innerHTML = "😐";
+	  		setTimeout(function(){
+	  			document.getElementById("computerFace").innerHTML = "😜"
+	  		}, 3000);
 					
 				}
 };

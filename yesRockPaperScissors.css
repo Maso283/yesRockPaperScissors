@@ -60,22 +60,24 @@ h1 {
 }
 
 .computer {
-  width: min-content;
-  height:  min-content;
+  width: 32px;
+  height:  32px;
   /*Note: spent an hour trying to figure out how I got the
   shape and size for the buttons and how to apply it to the computer.
   setting width and height with min-content seemd to work.
   I must look further into this. */
   background-color: black;
-  padding: 15px 32px;
+  padding: 32px 32px;
   text-align: center;
-  text-decoration: none;
   font-size: 16px;
 
   border-radius: 5px;
 
   align-self: flex-start;
   justify-self: center;
+  align-content: center;
+
+  position: relative;
 
   color: red;
 
@@ -88,6 +90,7 @@ h1 {
   display: grid;
   grid-template-columns: [col-start] 1fr [col-2] 1fr [col-end] 1fr;
   grid-template-rows: [row-start] 1fr [row-2] 1fr [row-end] 1fr;
+
 
 }
 
@@ -135,6 +138,11 @@ h1 {
 
 }
 
+.emojiWrapper{
+  align-self: center;
+  justify-self: center;
+  
+}
 
 .item1{
 
