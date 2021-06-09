@@ -70,15 +70,16 @@ h1 {
 .display{
   background-color: black;
   justify-self: center;
-  justify-items: center;
+  text-align: center;
   color: red;
   width:  64px;
   height: 64px;
+
 }
 
 .emojiWrapper{text-align: center;}
 
-#hat{
+#hatPosition{
 
 
   grid-row-start: 1;
@@ -86,7 +87,7 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 3;
 }
-#face{
+#facePosition{
 
 
   grid-row-start: 2;
@@ -94,7 +95,7 @@ h1 {
   grid-column-start: 2;
   grid-column-end: 3;
 }
-#lHand{
+#lHandPosition{
 
 
   grid-row-start: 3;
@@ -102,7 +103,7 @@ h1 {
   grid-column-start: 1;
   grid-column-end: 2;
 }
-#rHand{
+#rHandPosition{
 
 
   grid-row-start: 3;

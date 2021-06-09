@@ -43,25 +43,25 @@ function playRock() {
     computerSelection = computerChoice();
     if (computerSelection == "rock") { //rock v rock
 	  		  alert(`DRAW!`);
-	  		  document.getElementById("computerFace").innerHTML = "😐";
+	  		  document.getElementById("face").innerText = "😐";
 	  		  setTimeout(function(){
-	  			document.getElementById("computerFace").innerHTML = "😜"
+	  			document.getElementById("face").innerText = "😜"
 	  		}, 3000);
 	  		
 	  		 }
 	  		else if (computerSelection == "paper") { //rock v paper
 	  			alert(`LOSE! Paper covers rock!`);
-	  			document.getElementById("computerFace").innerHTML = "😁";
+	  			document.getElementById("face").innerText = "😁";
 	  		  setTimeout(function(){
-	  			document.getElementById("computerFace").innerHTML = "😜"
+	  			document.getElementById("face").innerText = "😜"
 	  		}, 3000); 
 	  			//return point to computer;
 	  		}
 	  			else if (computerSelection == "scissors") { //rock v scissors
 	  				alert(`WIN! Rock CRUSHES scissors!`);
-	  				document.getElementById("computerFace").innerHTML = "😤";
+	  				document.getElementById("face").innerText = "😤";
 	  		    setTimeout(function(){
-	  			  document.getElementById("computerFace").innerHTML = "😜"
+	  			  document.getElementById("face").innerText = "😜"
 	  		}, 3000);
 	  				//return point to player
 	  		}
@@ -74,25 +74,25 @@ function playPaper() {
   computerSelection = computerChoice();
   if (computerSelection == "rock") { //paper v rock
 			alert(`WIN! Paper covers rock!`);
-			document.getElementById("computerFace").innerHTML = "😤";
+			document.getElementById("face").innerText = "😤";
 	  	setTimeout(function(){
-	  	document.getElementById("computerFace").innerHTML = "😜"
+	  	document.getElementById("face").innerText = "😜"
 	  		}, 3000);
 			
 			}
 			else if (computerSelection == "paper") { //paper v paper
 				alert(`DRAW`);
-				document.getElementById("computerFace").innerHTML = "😐";
+				document.getElementById("face").innerText = "😐";
 	  		setTimeout(function(){
-	  			document.getElementById("computerFace").innerHTML = "😜"
+	  			document.getElementById("face").innerText = "😜"
 	  		}, 3000);
 				
 			}
 				else if (computerSelection == "scissors") { //paper v scissors
 					alert(`LOSE! Scissors cut paper!`);
-					document.getElementById("computerFace").innerHTML = "😁";
+					document.getElementById("face").innerText = "😁";
 	  		  setTimeout(function(){
-	  			document.getElementById("computerFace").innerHTML = "😜"
+	  			document.getElementById("face").innerText = "😜"
 	  		}, 3000); 
 					
       }
@@ -103,25 +103,25 @@ function playScissors() {
 
   if (computerSelection == "rock") { //scissors v rock
 			alert(`LOSE! Rock CRUSHES scissors!`);
-			document.getElementById("computerFace").innerHTML = "😁";
+			document.getElementById("face").innerText = "😁";
 	  		  setTimeout(function(){
-	  			document.getElementById("computerFace").innerHTML = "😜"
+	  			document.getElementById("face").innerText = "😜"
 	  		}, 3000); 
 			
 			 }
 			else if (computerSelection == "paper") { //scissors v paper
 				alert(`WIN! Scissors cut paper!`);
-				document.getElementById("computerFace").innerHTML = "😤";
+				document.getElementById("face").innerText = "😤";
 	  	setTimeout(function(){
-	  	document.getElementById("computerFace").innerHTML = "😜"
+	  	document.getElementById("face").innerText = "😜"
 	  		}, 3000); 
 				
 			}
 				else if (computerSelection == "scissors") { //scissors v scissors
 					alert(`DRAW!`);
-					document.getElementById("computerFace").innerHTML = "😐";
+					document.getElementById("face").innerText = "😐";
 	  		setTimeout(function(){
-	  			document.getElementById("computerFace").innerHTML = "😜"
+	  			document.getElementById("face").innerText = "😜"
 	  		}, 3000);
 					
 				}
