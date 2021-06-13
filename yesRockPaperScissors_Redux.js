@@ -127,7 +127,11 @@ function playScissors() {
 				}
 };
 
+function tallyUp() {
 
+  
+
+}
 
 
 
